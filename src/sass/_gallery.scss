@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding: 25px;
+  background: linear-gradient(to bottom, #0048ff, #f9e42b);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.button.is-hidden {
+  display: none;
+}
+
+.button > .spinner.is-hidden {
+  display: none;
+}
+
+/* Article List */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: calc(100vw - 80px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.articles li {
+  height: 450px;
+  overflow: hidden;
+}
+
+.articles img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.articles a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+.search-form input {
+  background-color: white;
+  border: none;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  color: var(--search-box-text);
+  padding-inline-start: 52px;
+  width: 50%;
+
+  padding: 10px;
+  outline: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  justify-content: space-around;
+}
+
+.photo-card {
+  width: calc((100% - 80px) / 4);
+  margin: 10px;
+  box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 50%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.btn-search {
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-bottom-right-radius: 22px;
+  border-top-right-radius: 22px;
+  outline: none;
+
+  transition: background-color 300ms linear, color 300ms linear;
+  &:hover,
+  &:focus {
+    background-color: #075db9;
+    outline: 0;
+  }
+}
